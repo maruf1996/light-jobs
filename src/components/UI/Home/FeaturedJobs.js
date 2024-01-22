@@ -22,8 +22,8 @@ const LatestJob = () => {
 
   return (
     <div className="py-4 lg:py-8">
-      <section className="p-3 lg:p-4 w-full lg:w-[85%] mx-auto ">
-        <div className="text-center mb-6 lg:mb-12">
+      <section className="p-3 md:p-4 w-full lg:w-[85%] mx-auto ">
+        <div className="text-center mb-6 md:mb-12">
           <h2 className="lg:text-2xl text-gray-600 font-semibold">
             Here You Can See
           </h2>
@@ -35,26 +35,33 @@ const LatestJob = () => {
           {jobdata?.map((job) => (
             <div
               key={job?.id}
-              className="flex justify-between  items-center bg-white rounded  p-4"
+              className="flex flex-col md:flex-row justify-between  items-center bg-white rounded pb-8 md:p-4"
             >
-              <div className="flex space-x-4">
+              <div className="flex flex-col md:flex-row md:space-x-4">
                 <img
-                  className="w-[4rem] h-[4rem]"
+                  className="w-full md:w-[4rem] md:h-[4rem]"
                   src={job?.companyLogo}
                   alt=""
                 />
                 <div className="">
                   <h1 className="text-[1.1rem] font-bold mt-3">{job?.title}</h1>
                   <p className="text-blue-500 mt-1">{job?.company}</p>
-                  <div className="flex space-x-1 mt-2">
-                    <p className="bg-[#FF0000] text-white py-1 px-3  text-xs ">
+                  <div className="flex justify-center md:justify-normal space-x-1 mt-2">
+                    <p
+                      className={`
+                      ${job?.jobType === "Freelance" && "bg-[#FF0000]"}
+                      ${job?.jobType === "Full Time" && "bg-[#F8A60C]"}
+                      ${job?.jobType === "Part-time" && "bg-[#6ACA00]"}
+                      text-white py-1 px-3 text-xs
+                    `}
+                    >
                       {job?.jobType}
                     </p>{" "}
                     <p>- {job?.location}</p>
                   </div>
                 </div>
               </div>
-              <div className="">
+              <div className="pt-8">
                 <button className="border border-blue-400 text-blue-500 font-semibold py-1 px-3 hover:bg-blue-500 hover:text-white">
                   Apply Now
                 </button>

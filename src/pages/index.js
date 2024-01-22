@@ -1,6 +1,6 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import Banner from "@/components/UI/Home/Banner";
-import LatestJob from "@/components/UI/Home/LatestJob";
+import FeaturedJobs from "@/components/UI/Home/FeaturedJobs";
 import Overview from "@/components/UI/Home/Overview";
 import TopCompanies from "@/components/UI/Home/TopCompanies";
 
@@ -10,7 +10,7 @@ export default function HomePage() {
       <Banner></Banner>
       <TopCompanies></TopCompanies>
       <Overview></Overview>
-      <LatestJob></LatestJob>
+      <FeaturedJobs></FeaturedJobs>
     </main>
   );
 }
