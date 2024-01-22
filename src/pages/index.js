@@ -4,6 +4,7 @@ import BrowseJobs from "@/components/UI/Home/BrowseJobs";
 import FeaturedJobs from "@/components/UI/Home/FeaturedJobs";
 import Overview from "@/components/UI/Home/Overview";
 import TopCompanies from "@/components/UI/Home/TopCompanies";
+import Video from "@/components/UI/Home/Video";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Overview></Overview>
       <BrowseJobs></BrowseJobs>
       <FeaturedJobs></FeaturedJobs>
+      <Video></Video>
     </main>
   );
 }

@@ -45,9 +45,11 @@ const Header = () => {
         >
           <Link
             href="/"
-            className="hidden lg:block font-bold text-3xl text-blue-600"
+            className="hidden lg:block font-bold text-3xl text-green-700"
           >
-            Light Jobs
+            Light
+            <span className="text-black">__</span>
+            Jobs
           </Link>
           <div className="hidden lg:flex">
             <ul className="lg:flex items-center space-x-3">
@@ -75,7 +77,7 @@ const Header = () => {
               <li className="inline-flex items-center divide-x">
                 <Link
                   href=""
-                  className="px-4 py-2 bg-blue-600 text-white rounded-l-full hover:text-black"
+                  className="px-4 py-2 bg-[#5A2BEF] text-white rounded-l-full hover:text-black"
                 >
                   Post a Job
                 </Link>

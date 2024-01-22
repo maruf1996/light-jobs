@@ -9,7 +9,7 @@ const Overview = () => {
             Here You Can See
           </h2>
           <h1 className="text-3xl lg:text-5xl text-gray-900 font-semibold mt-2">
-            How It <span className="text-blue-600 font-normal">Works?</span>
+            How It <span className="text-[#5A2BEF] font-normal">Works?</span>
           </h1>
         </div>
         <div className="container grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">

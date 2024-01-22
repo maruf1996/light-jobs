@@ -56,7 +56,7 @@ const TopCompanies = () => {
             Here You Can See
           </h2>
           <h1 className="text-3xl lg:text-5xl text-gray-900 font-semibold mt-2">
-            Top <span className="text-blue-600 font-normal">Employers?</span>
+            Top <span className="text-[#5A2BEF] font-normal">Employers?</span>
           </h1>
         </div>
         <Slider {...settings}>

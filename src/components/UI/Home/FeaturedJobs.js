@@ -28,7 +28,7 @@ const LatestJob = () => {
             Here You Can See
           </h2>
           <h1 className="text-3xl lg:text-5xl text-gray-900 font-semibold mt-2">
-            Featured <span className="text-blue-600 font-normal">Jobs</span>
+            Featured <span className="text-[#5A2BEF] font-normal">Jobs</span>
           </h1>
         </div>
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
@@ -45,7 +45,7 @@ const LatestJob = () => {
                 />
                 <div className="">
                   <h1 className="text-[1.1rem] font-bold mt-3">{job?.title}</h1>
-                  <p className="text-blue-500 mt-1">{job?.company}</p>
+                  <p className="text-[#5A2BEF] mt-1">{job?.company}</p>
                   <div className="flex justify-center md:justify-normal space-x-1 mt-2">
                     <p
                       className={`
@@ -62,7 +62,7 @@ const LatestJob = () => {
                 </div>
               </div>
               <div className="pt-8">
-                <button className="border border-blue-400 text-blue-500 font-semibold py-1 px-3 hover:bg-blue-500 hover:text-white">
+                <button className="border border-[#5A2BEF] text-[#5A2BEF] font-semibold py-1 px-3 hover:bg-[#5A2BEF] hover:text-white">
                   Apply Now
                 </button>
               </div>
