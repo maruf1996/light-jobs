@@ -41,7 +41,7 @@ const Header = () => {
     <header className="shadow-xl bg-gray-50">
       <div className="">
         <div
-          className={`p-2 container flex flex-row lg:flex-row justify-between items-center h-12 md:h-16 lg:h-18 mx-auto`}
+          className={`p-2 container flex flex-row lg:flex-row justify-between items-center h-16 lg:h-18 mx-auto`}
         >
           <Link
             href="/"

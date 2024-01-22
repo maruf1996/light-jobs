@@ -21,7 +21,7 @@ const LatestJob = () => {
   }, []);
 
   return (
-    <div className="py-4 lg:py-8">
+    <div className="py-4 lg:py-8 bg-white">
       <section className="p-3 md:p-4 w-full lg:w-[85%] mx-auto ">
         <div className="text-center mb-6 md:mb-12">
           <h2 className="lg:text-2xl text-gray-600 font-semibold">
@@ -31,11 +31,11 @@ const LatestJob = () => {
             Featured <span className="text-blue-600 font-normal">Jobs</span>
           </h1>
         </div>
-        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
           {jobdata?.map((job) => (
             <div
               key={job?.id}
-              className="flex flex-col md:flex-row justify-between  items-center bg-white rounded pb-8 md:p-4"
+              className="flex flex-col md:flex-row justify-between  items-center bg-white rounded pb-8 md:p-4 border shadow-md"
             >
               <div className="flex flex-col md:flex-row md:space-x-4">
                 <img

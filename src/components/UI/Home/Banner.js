@@ -4,7 +4,7 @@ import { FaBriefcase, FaUserLarge } from "react-icons/fa6";
 
 const Banner = () => {
   return (
-    <div className="bg-cover bg-center h-[18rem] lg:h-[98vh] relative z-0">
+    <div className="bg-cover bg-center h-[22rem] lg:h-[98vh] relative z-0">
       <img
         src="/assets/banner.jpg"
         alt="Hero Background"
