@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 /* eslint-disable @next/next/no-img-element */
-const LatestJob = () => {
+const FeaturedJobs = () => {
   const [jobdata, setJobata] = useState();
 
   useEffect(() => {
@@ -37,9 +37,9 @@ const LatestJob = () => {
               key={job?.id}
               className="flex flex-col md:flex-row justify-between  items-center bg-white rounded pb-8 md:p-4 border shadow-md"
             >
-              <div className="flex flex-col md:flex-row md:space-x-4">
+              <div className="flex flex-col items-center md:items-start md:flex-row md:space-x-4">
                 <img
-                  className="w-full md:w-[4rem] md:h-[4rem]"
+                  className="w-[10rem] md:w-[4rem] md:h-[4rem]"
                   src={job?.companyLogo}
                   alt=""
                 />
@@ -74,4 +74,4 @@ const LatestJob = () => {
   );
 };
 
-export default LatestJob;
+export default FeaturedJobs;
