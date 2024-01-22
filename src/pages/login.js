@@ -1,32 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
 import RootLayout from "@/components/Layouts/RootLayout";
-import { loginUser } from "@/redux/features/userSlice";
+import { useUserLoginMutation } from "@/redux/features/authApi";
+import { storeUserInfo } from "@/services/auth.service";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, isLoading } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
+  const [userLogin] = useUserLoginMutation();
   const router = useRouter();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      await dispatch(loginUser({ email, password }));
+      const loginData = { email, password };
+      const res = await userLogin(loginData);
+      if (res?.data?.data?.accessToken) {
+        storeUserInfo(res?.data?.data?.accessToken);
+      }
+      if (res) {
+        router.push("/");
+      }
     } catch (error) {
       console.error("Error logging in user:", error.message);
     }
     setEmail("");
     setPassword("");
   };
-
-  if (user?.email) {
-    router.push("/");
-  }
 
   return (
     <div className="min-h-screen mb-2 md:mb-8 lg:mb-12 bg-[#F1F5F9]">
@@ -43,7 +45,7 @@ const Login = () => {
             <Link className="" href="/">
               Home
             </Link>{" "}
-            / JobName
+            / Login
           </p>
         </div>
       </div>
@@ -51,7 +53,7 @@ const Login = () => {
         <div className="flex flex-col w-[96%] md:w-[60%] lg:w-[40%] mx-auto p-6 rounded-md sm:p-10 bg-white  text-gray-900 border">
           <div className="text-center">
             <h1 className="my-3 text-gray-700 text-2xl font-bold">
-              Login Or Register{" "}
+              Login Or Signup{" "}
             </h1>
           </div>
           <form onSubmit={handleSignIn}>
@@ -85,13 +87,13 @@ const Login = () => {
               type="submit"
               className="w-full btn text-white bg-blue-700 hover:bg-gray-700 lg:mt-8 mt-5 px-9"
             >
-              Submit
+              Login
             </button>
           </form>
           <p className="mt-3 text-center">
             {" "}
             New User?{" "}
-            <Link className="text-blue-900" href="/login">
+            <Link className="text-blue-900" href="/register">
               Register Here
             </Link>{" "}
           </p>

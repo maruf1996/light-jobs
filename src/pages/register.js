@@ -1,34 +1,44 @@
 /* eslint-disable @next/next/no-img-element */
 import RootLayout from "@/components/Layouts/RootLayout";
-import { loginUser } from "@/redux/features/userSlice";
+import { useUserSignupMutation } from "@/redux/features/authApi";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
 const Register = () => {
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
-  const { user, isLoading } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [userSignup] = useUserSignupMutation();
   const router = useRouter();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      await dispatch(loginUser({ email, phone, password }));
+      const registerData = {
+        email,
+        phoneNumber,
+        password,
+        name: {
+          firstName,
+          lastName,
+        },
+      };
+      const res = await userSignup(registerData);
+      if (res) {
+        router.push("/login");
+      }
     } catch (error) {
       console.error("Error logging in user:", error.message);
     }
     setEmail("");
-    setPhone("");
+    setPhoneNumber("");
+    setFirstName("");
+    setLastName("");
     setPassword("");
   };
-
-  if (user?.email) {
-    router.push("/");
-  }
 
   return (
     <div className="min-h-screen mb-2 md:mb-8 lg:mb-12 bg-[#F1F5F9]">
@@ -39,13 +49,13 @@ const Register = () => {
           className="absolute top-0 left-0 w-full h-full object-cover contrast-50"
         />
         <div className="text-white flex justify-between items-center absolute inset-0 w-[90%] lg:w-[80%] mx-auto">
-          <h1 className="text-4xl font-bold">Login</h1>
+          <h1 className="text-4xl font-bold">Signup</h1>
           <p>
             {" "}
             <Link className="" href="/">
               Home
             </Link>{" "}
-            / JobName
+            / Signup
           </p>
         </div>
       </div>
@@ -53,20 +63,20 @@ const Register = () => {
         <div className="flex flex-col w-[96%] md:w-[60%] lg:w-[40%] mx-auto p-6 rounded-md sm:p-10 bg-white  text-gray-900 border">
           <div className="text-center">
             <h1 className="my-3 text-gray-700 text-2xl font-bold">
-              Register Or Login{" "}
+              Signup Or Login{" "}
             </h1>
           </div>
           <form onSubmit={handleSignIn}>
-            <div className="form-control w-full flex flex-row !important space-x-4">
+            <div className="form-control w-full grid grid-cols-1 lg:grid-cols-2 !important lg:gap-4">
               <div className="">
                 <label className="label">
                   <span className="label-text font-semibold">First Name</span>
                 </label>
                 <input
-                  type="phone"
-                  name="phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  type="text"
+                  name="firstName"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   className="input w-full input-bordered"
                   required
                 />
@@ -76,10 +86,10 @@ const Register = () => {
                   <span className="label-text font-semibold">Last Name</span>
                 </label>
                 <input
-                  type="phone"
-                  name="phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  type="text"
+                  name="lastName"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                   className="input w-full input-bordered"
                   required
                 />
@@ -104,9 +114,9 @@ const Register = () => {
               </label>
               <input
                 type="phone"
-                name="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                name="phoneNumber"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
                 className="input w-full input-bordered"
                 required
               />
@@ -128,7 +138,7 @@ const Register = () => {
               type="submit"
               className="w-full btn text-white bg-blue-700 hover:bg-gray-700 lg:mt-8 mt-5 px-9"
             >
-              Submit
+              Signup
             </button>
           </form>
           <p className="mt-6 text-center">

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Full Time",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo1.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Freelance",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo2.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Part-time",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo3.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Freelance",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo4.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Full Time",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo5.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Freelance",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo6.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Part-time",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo7.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Full Time",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo8.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Freelance",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo9.jpg"
+  },
+  {
+    "id": "10",
+    "title": "Technical Database Engineer",
+    "company": "Database Management Company",
+    "jobType": "Freelance",
+    "location": "New York",
+    "companyLogo": "/assets/jobs/emplogo10.jpg"
+  }
+]

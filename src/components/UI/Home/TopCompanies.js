@@ -18,21 +18,44 @@ const images = [
 
 const TopCompanies = () => {
   const [settings] = useState({
-    slidesToShow: 8,
+    slidesToShow: 9,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     rtl: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 8,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 
   return (
-    <div className="lg:py-8 bg-gray-100">
+    <div className="py-4 md:py-8 bg-gray-100">
       <section className="p-4 w-full lg:w-[90%] mx-auto ">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl text-gray-600 font-semibold">
+        <div className="text-center mb-4 lg:mb-12">
+          <h2 className="lg:text-2xl text-gray-600 font-semibold">
             Here You Can See
           </h2>
-          <h1 className="text-5xl text-gray-900 font-semibold mt-2">
+          <h1 className="text-3xl lg:text-5xl text-gray-900 font-semibold mt-2">
             Top <span className="text-blue-600 font-normal">Employers?</span>
           </h1>
         </div>
