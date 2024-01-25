@@ -106,7 +106,7 @@ const CompanyRegister = () => {
             </h1>
           </div>
           <form className="space-y-4 lg:space-y-8" onSubmit={handleSignIn}>
-            <div className=" border border-[#5A2BEF] p-6 rounded-md">
+            <div className=" border p-6 rounded-md">
               <h1 className="text-[1.2rem]">Company Information</h1>
               <div className="form-control w-full grid grid-cols-1 lg:grid-cols-3 !important gap-4">
                 <div className="">
@@ -118,7 +118,7 @@ const CompanyRegister = () => {
                     name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
@@ -131,7 +131,7 @@ const CompanyRegister = () => {
                     name="industry"
                     value={industry}
                     onChange={(e) => setIndustry(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
@@ -144,7 +144,7 @@ const CompanyRegister = () => {
                     name="location"
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
@@ -157,7 +157,7 @@ const CompanyRegister = () => {
                     name="address"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
@@ -171,7 +171,7 @@ const CompanyRegister = () => {
                     value={size}
                     onChange={(e) => setSize(e.target.value)}
                     required
-                    className="select select-bordered w-full border-[#5A2BEF]"
+                    className="select select-bordered w-full"
                   >
                     <option>Small</option>
                     <option>Medium</option>
@@ -189,13 +189,13 @@ const CompanyRegister = () => {
                     name="numberOfEmployees"
                     value={numberOfEmployees}
                     onChange={(e) => setnumberOfEmployees(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
               </div>
             </div>
-            <div className="border p-6 rounded-md border-[#5A2BEF]">
+            <div className="border p-6 rounded-md">
               <h1 className="text-[1.2rem]">Contact Information</h1>
               <div className="form-control w-full grid grid-cols-1 lg:grid-cols-3 !important gap-4">
                 <div className="form-control w-full">
@@ -207,7 +207,7 @@ const CompanyRegister = () => {
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered"
                     required
                   />
                 </div>
@@ -220,7 +220,7 @@ const CompanyRegister = () => {
                     name="phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered"
                     required
                   />
                 </div>
@@ -233,7 +233,7 @@ const CompanyRegister = () => {
                     name="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered"
                     required
                   />
                 </div>
@@ -246,7 +246,7 @@ const CompanyRegister = () => {
                     name="twitter"
                     value={twitter}
                     onChange={(e) => setTwitter(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered"
                     required
                   />
                 </div>
@@ -259,7 +259,7 @@ const CompanyRegister = () => {
                     name="linkedin"
                     value={linkedin}
                     onChange={(e) => setLinkedin(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
@@ -272,13 +272,13 @@ const CompanyRegister = () => {
                     name="facebook"
                     value={facebook}
                     onChange={(e) => setFacebook(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
               </div>
             </div>
-            <div className="border p-6 rounded-md border-[#5A2BEF]">
+            <div className="border p-6 rounded-md ">
               <h1 className="text-[1.2rem]">Others</h1>
               <div className="form-control w-full grid grid-cols-1 lg:grid-cols-3 !important gap-4">
                 <div className="form-control w-full">
@@ -290,7 +290,7 @@ const CompanyRegister = () => {
                     name="website"
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered "
                     required
                   />
                 </div>
@@ -303,7 +303,7 @@ const CompanyRegister = () => {
                     name="logoUrl"
                     value={logoUrl}
                     onChange={(e) => setLogoUrl(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered"
                     required
                   />
                 </div>
@@ -318,7 +318,7 @@ const CompanyRegister = () => {
                     name="introducing"
                     value={introducing}
                     onChange={(e) => setIntroducing(e.target.value)}
-                    className="input w-full input-bordered border-[#5A2BEF]"
+                    className="input w-full input-bordered"
                     required
                   />
                 </div>
@@ -333,7 +333,7 @@ const CompanyRegister = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     required
-                    className="textarea textarea-bordered w-full border-[#5A2BEF]"
+                    className="textarea textarea-bordered w-full"
                   ></textarea>
                 </div>
               </div>

@@ -24,7 +24,7 @@ const Banner = () => {
         </p>
         <div className="mt-12 space-x-4 flex ">
           <Link
-            href="/company-sign-up"
+            href="/companyLogin"
             type="button"
             className="md:px-8 px-2 py-1 md:py-3 md:font-bold border hover:border-[#17D27C] rounded flex space-x-2 hover:bg-[#17D27C]"
           >
